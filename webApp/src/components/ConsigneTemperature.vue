@@ -1,9 +1,21 @@
 <template>
   <div class="order-container">
-    <ion-title class="order-display">19.5 °C</ion-title>
+    <ion-title class="order-display">{{ temperature }} °C</ion-title>
     <div class="order-box">
-      <ion-fab-button size="large" class="button-order"> - </ion-fab-button>
-      <ion-fab-button size="large" class="button-order"> + </ion-fab-button>
+      <ion-fab-button
+        @click="temperature -= 0.5"
+        size="large"
+        class="button-order"
+      >
+        -
+      </ion-fab-button>
+      <ion-fab-button
+        @click="temperature += 0.5"
+        size="large"
+        class="button-order"
+      >
+        +
+      </ion-fab-button>
     </div>
   </div>
 
@@ -17,11 +29,17 @@
 </template>
 
 <script lang="ts">
-import { IonFabButton } from "@ionic/vue";
+import { IonFabButton, IonTitle } from "@ionic/vue";
 
 export default {
+  data() {
+    return {
+      temperature: 20,
+    };
+  },
   components: {
     IonFabButton,
+    IonTitle,
   },
 };
 </script>
@@ -40,6 +58,8 @@ export default {
   width: min(75vw, 350px);
   border-radius: 50%;
   background-color: var(--ion-color-light-shade);
+  border: solid;
+  border-color: var(--ion-color-light-tint);
   justify-content: space-around;
   align-items: flex-end;
 }
