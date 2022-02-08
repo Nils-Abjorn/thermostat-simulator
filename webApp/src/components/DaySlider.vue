@@ -1,7 +1,7 @@
 <template>
   <swiper
     :direction="'vertical'"
-    :slidesPerView="1"
+    :slidesPerView="auto"
     :spaceBetween="20"
     :loop="true"
     :pagination="pagination"
@@ -11,10 +11,13 @@
     }"
     class="mySwiper"
   >
-    <swiper-slide>Lundi</swiper-slide><swiper-slide>Mardi</swiper-slide
-    ><swiper-slide>Mercredi</swiper-slide><swiper-slide>Jeudi</swiper-slide
-    ><swiper-slide>Vendredi</swiper-slide><swiper-slide>Samedi</swiper-slide
-    ><swiper-slide>Dimanche</swiper-slide>
+    <swiper-slide><day-parameters-base day="Lundi" /></swiper-slide
+    ><swiper-slide><day-parameters-base day="Mardi" /></swiper-slide
+    ><swiper-slide><day-parameters-base day="Mercredi" /></swiper-slide
+    ><swiper-slide><day-parameters-base day="Jeudi" /></swiper-slide
+    ><swiper-slide><day-parameters-base day="Vendredi" /></swiper-slide
+    ><swiper-slide><day-parameters-base day="Samedi" /></swiper-slide
+    ><swiper-slide><day-parameters-base day="Dimanche" /></swiper-slide>
   </swiper>
 </template>
 <script>
@@ -30,11 +33,14 @@ import "../theme/style.css";
 
 // import required modules
 import { Pagination } from "swiper";
+import DayParametersBase from "./DayParametersBase.vue";
 
 export default {
   components: {
     Swiper,
     SwiperSlide,
+
+    DayParametersBase,
   },
   setup() {
     let bulletContent = ["LUN", "MAR", "MER", "JEU", "VEN", "SAM", "DIM"];
