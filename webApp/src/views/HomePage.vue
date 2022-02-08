@@ -35,7 +35,6 @@ export default {
     IonTitle,
     IonContent,
     IonPage,
-
     ConsigneTemperature,
     HomeDisplayHeader,
   },

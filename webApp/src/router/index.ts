@@ -23,6 +23,10 @@ const routes: Array<RouteRecordRaw> = [
         path: 'Programmation',
         component: () => import('@/views/ProgrammationPage.vue')
       },
+      {
+        path: 'Settings',
+        component: () => import('@/views/SettingsPage.vue')
+      },
     ]
   }
 ]

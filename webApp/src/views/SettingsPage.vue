@@ -2,16 +2,15 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Programmation</ion-title>
+        <ion-title>Réglages</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Programmation</ion-title>
+          <ion-title size="large">Réglages</ion-title>
         </ion-toolbar>
       </ion-header>
-      <day-slider class="mainWindow" />
     </ion-content>
   </ion-page>
 </template>
@@ -24,11 +23,9 @@ import {
   IonTitle,
   IonContent,
 } from "@ionic/vue";
-import DaySlider from "../components/DaySlider.vue";
 
 export default {
   components: {
-    DaySlider,
     IonHeader,
     IonToolbar,
     IonTitle,
@@ -37,9 +34,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.mainWindow {
-  height: 100%;
-}
-</style>

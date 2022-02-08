@@ -7,10 +7,13 @@
           <ion-icon :icon="home" />
           <ion-label>Home</ion-label>
         </ion-tab-button>
-
         <ion-tab-button tab="programmation" href="/Programmation">
           <ion-icon :icon="calendar" />
           <ion-label>Programmation</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="settings" href="/Settings">
+          <ion-icon :icon="settings" />
+          <ion-label>Réglages</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
@@ -27,7 +30,7 @@ import {
   IonPage,
   IonRouterOutlet,
 } from "@ionic/vue";
-import { home, calendar } from "ionicons/icons";
+import { home, calendar, settings } from "ionicons/icons";
 
 export default {
   components: {
@@ -43,6 +46,7 @@ export default {
     return {
       home,
       calendar,
+      settings,
     };
   },
 };
