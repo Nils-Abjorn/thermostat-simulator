@@ -1,8 +1,8 @@
 <template>
   <swiper
     :direction="'vertical'"
-    :slidesPerView="auto"
-    :spaceBetween="20"
+    :slidesPerView="1.5"
+    :spaceBetween="0"
     :loop="true"
     :pagination="pagination"
     :modules="modules"
@@ -34,7 +34,6 @@ import "../theme/style.css";
 // import required modules
 import { Pagination } from "swiper";
 import DayParametersBase from "./DayParametersBase.vue";
-
 export default {
   components: {
     Swiper,
