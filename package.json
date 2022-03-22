@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/hecatris/ihm/issues"
   },
-  "homepage": "https://github.com/hecatris/ihm#readme"
+  "homepage": "https://github.com/hecatris/ihm#readme",
+  "dependencies": {}
 }
