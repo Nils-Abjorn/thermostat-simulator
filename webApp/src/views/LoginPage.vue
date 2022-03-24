@@ -20,7 +20,7 @@
         </ion-item>
         <ion-item
           ><ion-button style="width: 100%" size="default"
-            >Connection</ion-button
+            >Connexion</ion-button
           ></ion-item
         >
         <ion-item><ion-toggle></ion-toggle> rester connecté</ion-item>
