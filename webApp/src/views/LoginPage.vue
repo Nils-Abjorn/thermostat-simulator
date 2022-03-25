@@ -19,7 +19,7 @@
           <ion-input placeholder="Mot de passe" type="password"></ion-input>
         </ion-item>
         <ion-item
-          ><ion-button style="width: 100%" size="default"
+          ><ion-button style="width: 100%" size="default" @click="connect"
             >Connexion</ion-button
           ></ion-item
         >
@@ -30,7 +30,12 @@
 </template>
 <script>
 import { person, mail, lockClosed } from "ionicons/icons";
-import { IonTitle, IonCard } from "@ionic/vue";
+import {
+  IonTitle,
+  IonCard,
+  toastController,
+  loadingController,
+} from "@ionic/vue";
 export default {
   setup() {
     return {
@@ -42,6 +47,31 @@ export default {
   components: {
     IonTitle,
     IonCard,
+  },
+  methods: {
+    async openToast() {
+      const toast = await toastController.create({
+        message: "connexion réussie",
+        duration: 2000,
+        position: "top",
+        animated: true,
+      });
+      this.$router.push("/home");
+      return toast.present();
+    },
+    async connect() {
+      const loading = await loadingController.create({
+        message: "Connexion en cours...",
+        duration: this.timeout,
+      });
+
+      await loading.present();
+
+      setTimeout(() => {
+        loading.dismiss();
+        this.openToast();
+      }, 5000);
+    },
   },
 };
 </script>
