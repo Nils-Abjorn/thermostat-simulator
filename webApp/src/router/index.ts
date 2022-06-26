@@ -6,7 +6,7 @@ import LoginPage from "@/views/LoginPage.vue"
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/login'
   },
   {
     path: '/Login',
